@@ -1,0 +1,59 @@
+.mymenu{
+    background: -webkit-linear-gradient(120deg,hsl(318, 75%, 66%),hsl(325, 97%, 66%));
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+.menu a{
+    color: #fff;
+}
+.menu a:hover{
+    color: #580953;
+}
+.menu-right{
+  float: right;
+}
+.menu-2{
+    margin-left: 320px;
+}
+.dropdown-item_parent:hover .dropdown-item_child{
+    display: block;
+}
+.dropdown-item_parent{
+    position: relative;
+}
+.dropdown-item_child li a:hover{
+    background-color: #f3ca45;
+}
+.dropdown-item_child li{
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+}
+.dropdown-item_child{
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 200px;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.eightstore-text {
+    font-size: 30px; /* Kích thước nhỏ hơn cho màn hình điện thoại */
+}
+/* reponsive */
+@media (max-width: 768px) {
+    .eightstore-text {
+        font-size: 16px; /* Kích thước nhỏ hơn cho màn hình điện thoại */
+    }
+    .menu .nav-link{
+        font-size: 14px;
+        padding: 8px 6px;
+    }
+    .search{
+        padding-top: 12px;
+    }
+}
