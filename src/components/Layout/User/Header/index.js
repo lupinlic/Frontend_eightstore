@@ -16,7 +16,7 @@ function Header() {
 
 
     const handleLogout = () => {
-        axios.get('http://eightstore.io.vn/api/user/logout')
+        axios.get('https://eightstore.io.vn/api/user/logout')
         localStorage.removeItem('authToken');
         localStorage.removeItem('user');
         setCartCount(0)
@@ -33,7 +33,7 @@ function Header() {
 
     useEffect(() => {
         if (userId !== null && userId !== undefined) {
-            axios.get(`http://eightstore.io.vn/api/users/${userId}/carts`)
+            axios.get(`https://eightstore.io.vn/api/users/${userId}/carts`)
                 .then(response => {
                     setCartCount(response.data.count_cart);
                 })

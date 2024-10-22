@@ -41,7 +41,7 @@ function Home() {
     const [categorys, setCategory] = useState([]);
     useEffect(() => {
         // Gọi hai API để lấy dữ liệu sản phẩm và danh mục, nhà cung cấp
-        axios.get('http://eightstore.io.vn/api/products')
+        axios.get('https://eightstore.io.vn/api/products')
 
 
             .then(response => {
@@ -52,7 +52,7 @@ function Home() {
                 console.error('Error fetching data: ', error);
             });
 
-        axios.get('http://eightstore.io.vn/api/categorys')
+        axios.get('https://eightstore.io.vn/api/categorys')
             .then(response => {
                 // Truy cập vào phần "data" của API trả về và đặt vào state
                 setCategory(response.data.data);
@@ -76,7 +76,7 @@ function Home() {
         const categoryName = getCategoryName(categoryId);
         console.log(`/assets/img/${categoryName}/${productImg}`)
         try {
-            return `http://eightstore.io.vn/uploads/Categories/${categoryName}/${productImg}`;
+            return `https://eightstore.io.vn/uploads/Categories/${categoryName}/${productImg}`;
 
         } catch (error) {
             console.error('Error loading image:', error);

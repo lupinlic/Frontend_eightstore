@@ -14,7 +14,7 @@ function Login() {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        axios.post('http://eightstore.io.vn/api/user/login', {
+        axios.post('https://eightstore.io.vn/api/user/login', {
             user_email: user_email,
             user_password: user_password
         })
